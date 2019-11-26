@@ -1,16 +1,16 @@
-package com.example.teamate.ui.home;
+package com.example.teamate.ui.activities;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class ActivitiesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public ActivitiesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is activities fragment");
     }
 
     public LiveData<String> getText() {
