@@ -6,14 +6,14 @@ import androidx.lifecycle.ViewModel;
 
 public class ActivitiesViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
-
-    public ActivitiesViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is activities fragment");
-    }
-
-    public LiveData<String> getText() {
-        return mText;
-    }
+//    private MutableLiveData<String> mText;
+//
+//    public ActivitiesViewModel() {
+//        mText = new MutableLiveData<>();
+//        mText.setValue("This is activities fragment");
+//    }
+//
+//    public LiveData<String> getText() {
+//        return mText;
+//    }
 }
