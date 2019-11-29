@@ -22,12 +22,22 @@
             android:layout_below="@+id/header_cover_image"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-60dp"
-            android:background="@drawable/profileimg"
+            android:background="@drawable/circlecropped"
             android:elevation="5dp"
             android:padding="20dp"
-            android:scaleType="centerCrop"
-            />
+            android:scaleType="centerCrop" />
 
+
+<!--        <TextView-->
+<!--            android:id="@+id/Score"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="65dp"-->
+<!--            android:layout_below="@+id/header_cover_image"-->
+<!--            android:layout_marginTop="-30dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:elevation="5dp"-->
+<!--            android:padding="20dp"-->
+<!--            android:scaleType="centerCrop"/>-->
         <RelativeLayout
             android:id="@+id/profile_layout"
             android:layout_width="match_parent"
@@ -43,8 +53,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="76dp"
-                android:text="Pelumi Eniodunmo"
-                android:textColor="#fff"
+                android:text="Monty Montek"
+                android:textColor="@color/teamateWhite"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -61,7 +71,6 @@
 
         </RelativeLayout>
 
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -70,6 +79,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/HR_Yoga"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -78,7 +88,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="HR Yoga" />
+                android:text="HR Yoga"
+                android:drawableRight="@drawable/medal"/>
 
 
             <TextView
@@ -87,7 +98,7 @@
                 android:layout_margin="5dp"
                 android:layout_marginBottom="3dp"
                 android:layout_marginTop="3dp"
-                android:background="#fff"
+                android:background="#ffff"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
@@ -128,6 +139,37 @@
                 android:padding="20dp"
                 android:textSize="15dp"
                 android:text="Walked 2000 steps" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textSize="15dp"
+                android:text="Walked 4500 steps" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textSize="15dp"
+                android:text="Volunteered at Childrens Hospital"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:textSize="15dp"
+                android:text="Volunteered at ALS" />
+
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>
