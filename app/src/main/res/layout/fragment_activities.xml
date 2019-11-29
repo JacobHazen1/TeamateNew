@@ -89,7 +89,7 @@
                 android:padding="20dp"
                 android:textSize="15dp"
                 android:text="HR Yoga"
-                android:drawableRight="@drawable/medal"/>
+                android:drawableRight="@drawable/plus6small"/>
 
 
             <TextView
@@ -103,7 +103,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Workout for 45 Minutes" />
+                android:text="Workout for 45 Minutes"
+                android:drawableRight="@drawable/plus10small"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -114,7 +115,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Biked to Work" />
+                android:text="Biked to Work"
+                android:drawableRight="@drawable/plus6small"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -127,7 +129,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Workout for 2 hours" />
+                android:text="Workout for 2 hours"
+                android:drawableRight="@drawable/plus6small"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -138,7 +141,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Walked 2000 steps" />
+                android:text="Walked 2000 steps"
+                android:drawableRight="@drawable/plus10small"/>
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -148,7 +152,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Walked 4500 steps" />
+                android:text="Walked 4500 steps"
+                android:drawableRight="@drawable/plus6small"/>
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -158,7 +163,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Volunteered at Childrens Hospital"/>
+                android:text="Volunteered at Childrens Hospital"
+                android:drawableRight="@drawable/plus10small"/>
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -168,7 +174,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Volunteered at ALS" />
+                android:text="Volunteered at ALS"
+                android:drawableRight="@drawable/plus10small"/>
 
         </LinearLayout>
     </RelativeLayout>
