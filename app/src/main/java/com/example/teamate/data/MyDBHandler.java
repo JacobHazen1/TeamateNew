@@ -16,6 +16,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_EMAIL = "Email";
     public static final String COLUMN_UNAME = "UserName";
     public static final String COLUMN_CID = "CompanyID";
+    public static final String COLUMN_AID = "AccountID";
     public static final String COLUMN_PASS = "Password";
     //initialize the database
     public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -23,14 +24,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_TABLE = "CREATE TABLE" + TABLE_NAME + "(" + COLUMN_FNAME + "TEXT," + COLUMN_LNAME + "TEXT," + COLUMN_EMAIL + "TEXT," + COLUMN_UNAME + "TEXT PRIMARYKEY," + COLUMN_CID + "INTEGER," + COLUMN_PASS + "TEXT )";
+        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_FNAME + "TEXT," + COLUMN_LNAME + "TEXT," + COLUMN_EMAIL + "TEXT," + COLUMN_UNAME + "TEXT," + COLUMN_CID + "INTEGER," + COLUMN_AID + "INTEGER," + COLUMN_PASS + "TEXT )";
         db.execSQL(CREATE_TABLE);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {}
     public String loadHandler(String tableName) {
         String result = "";
-        String query = "SELECT * FROM" + tableName;
+        String query = "SELECT * FROM " + tableName;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         while (cursor.moveToNext()) {
@@ -49,13 +50,34 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(COLUMN_LNAME, account.getLastName());
         values.put(COLUMN_EMAIL, account.getEmail());
         values.put(COLUMN_UNAME, account.getUsername());
-        values.put(COLUMN_CID, account.getID());
+        values.put(COLUMN_CID, account.getCompanyID());
+        values.put(COLUMN_AID, account.getAccountID());
         values.put(COLUMN_PASS, account.getPassword());
         SQLiteDatabase db = this.getWritableDatabase();
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
-    //public Account findHandler(String accountFName) {}
+    public Account findHandler(String accountEmail) {
+        String query = "Select * FROM " + TABLE_NAME + "WHERE" + COLUMN_EMAIL + " = " + "'" + accountEmail + "'";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        Account account = new Account();
+        if (cursor.moveToFirst()) {
+            cursor.moveToFirst();
+            account.setFirstName(cursor.getString(0));
+            account.setLastName(cursor.getString(1));
+            account.setEmail(cursor.getString(2));
+            account.setUsername(cursor.getString(3));
+            account.setCompanyID(Integer.parseInt(cursor.getString(4)));
+            account.setAccountID(Integer.parseInt(cursor.getString(5)));
+            account.setPassword(cursor.getString(6));
+            cursor.close();
+        } else {
+            account = null;
+        }
+        db.close();
+        return account;
+    }
     //public boolean deleteHandler(int ID) {}
     //public boolean updateHandler(int ID, String name) {}
 }

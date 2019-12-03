@@ -7,16 +7,18 @@ public class Account {
     private String email;
     private String username;
     private int companyID;
+    private int accountID;
     private String password;
 
     // Constructors
     public Account() {}
-    public Account(String inFirst, String inLast, String inEmail, String inUser, int inID, String inPassword) {
+    public Account(String inFirst, String inLast, String inEmail, String inUser, int inCID, int inAID, String inPassword) {
         this.firstName = inFirst;
         this.lastName = inLast;
         this.email = inEmail;
         this.username = inUser;
-        this.companyID = inID;
+        this.companyID = inCID;
+        this.accountID = inAID;
         this.password = inPassword;
     }
     // Getters and Setters
@@ -49,11 +51,18 @@ public class Account {
         return this.username;
     }
     // CompanyID
-    public void setID(int inID) {
+    public void setCompanyID(int inID) {
         this.companyID = inID;
     }
-    public int getID() {
+    public int getCompanyID() {
         return this.companyID;
+    }
+    // AccountID
+    public void setAccountID(int inID) {
+        this.accountID = inID;
+    }
+    public int getAccountID() {
+        return this.accountID;
     }
     // Password
     public void setPassword(String inPassword) {
