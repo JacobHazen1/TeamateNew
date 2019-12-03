@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,12 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.teamate.DisplayTask;
+import com.example.teamate.Contactus;
 import com.example.teamate.LoginActivity;
 import com.example.teamate.R;
-import com.example.teamate.ui.activities.ActivitiesFragment;
-
-import java.util.ArrayList;
 
 public class AddActivitiesFragment extends Fragment {
 
@@ -48,7 +43,7 @@ public class AddActivitiesFragment extends Fragment {
         addworkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), DisplayTask.class));
+                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), Contactus.class));
             }
         });
 

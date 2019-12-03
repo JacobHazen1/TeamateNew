@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/scrollFeed"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_display_task"
+    tools:showIn="@layout/activity_contactus"
     android:background="@drawable/gradient"
     android:focusableInTouchMode="true">
     <androidx.cardview.widget.CardView
@@ -61,7 +61,7 @@
                 <EditText
                     android:id="@+id/txtReg"
                     style="@style/modifiedEditText"
-                    android:hint="@string/reg_no" />
+                    android:hint="@string/company" />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtInputFeedback"
