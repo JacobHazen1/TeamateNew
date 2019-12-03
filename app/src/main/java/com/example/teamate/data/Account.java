@@ -7,11 +7,11 @@ public class Account {
     private String email;
     private String username;
     private int companyID;
-    private char[] password;
+    private String password;
 
     // Constructors
     public Account() {}
-    public Account(String inFirst, String inLast, String inEmail, String inUser, int inID, char[] inPassword) {
+    public Account(String inFirst, String inLast, String inEmail, String inUser, int inID, String inPassword) {
         this.firstName = inFirst;
         this.lastName = inLast;
         this.email = inEmail;
@@ -56,10 +56,10 @@ public class Account {
         return this.companyID;
     }
     // Password
-    public void setPassword(char[] inPassword) {
+    public void setPassword(String inPassword) {
         this.password = inPassword;
     }
-    public char[] getPassword() {
+    public String getPassword() {
         return this.password;
     }
 }
