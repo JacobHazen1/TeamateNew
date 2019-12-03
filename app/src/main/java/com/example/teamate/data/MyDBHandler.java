@@ -7,7 +7,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 
 public class MyDBHandler extends SQLiteOpenHelper {
-    //information of database
+    // information of database
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "accountDB.db";
     public static final String TABLE_NAME = "Account";
@@ -19,8 +19,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_AID = "AccountID";
     public static final String COLUMN_PASS = "Password";
     //initialize the database
-    public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+    public MyDBHandler(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -58,7 +58,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
     }
     public Account findHandler(String accountEmail) {
-        String query = "Select * FROM " + TABLE_NAME + "WHERE" + COLUMN_EMAIL + " = " + "'" + accountEmail + "'";
+        String query = "Select * FROM " + TABLE_NAME + " WHERE " + COLUMN_EMAIL + " = " + "'" + accountEmail + "'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         Account account = new Account();

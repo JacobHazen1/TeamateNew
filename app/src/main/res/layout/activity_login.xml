@@ -15,6 +15,7 @@
         android:src="@drawable/logo"/>
 
     <EditText
+        android:id="@+id/emailtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -28,6 +29,7 @@
         android:textColorHighlight="@color/teamateWhite"/>
 
     <EditText
+        android:id="@+id/passwordtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -73,6 +75,8 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnlogin"
+        android:onClick="finduser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Log In"
