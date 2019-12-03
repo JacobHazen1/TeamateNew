@@ -55,7 +55,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
-    public Student findHandler(String studentname) {}
-    public boolean deleteHandler(int ID) {}
-    public boolean updateHandler(int ID, String name) {}
+    //public Account findHandler(String accountFName) {}
+    //public boolean deleteHandler(int ID) {}
+    //public boolean updateHandler(int ID, String name) {}
 }
