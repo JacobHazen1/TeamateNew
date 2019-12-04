@@ -15,7 +15,7 @@ import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
-
+    private Button signupbutton;
     private EditText email;
     private EditText password;
     private MyDBHandler dbHandler;
@@ -50,6 +50,13 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     startActivity(new Intent(LoginActivity.this, Contactus.class));
                 }
+            }
+        });
+        signupbutton = (Button) findViewById(R.id.signuppage);
+        signupbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, Signup.class));
             }
         });
     }
