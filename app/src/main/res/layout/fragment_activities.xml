@@ -65,10 +65,23 @@
                 android:layout_below="@+id/user_profile_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:text="HR Department\nRank:\t\tPoints:\n125\t\t\t350"
+                android:text="HR Department\nRank:\t\tPoints:\n125\t\t\t54"
                 android:textColor="#fff"
                 android:textSize="14sp"
                 />
+
+            <Button
+                android:id="@+id/rewardbutton"
+                android:layout_width="108dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="294dp"
+                android:layout_marginBottom="23dp"
+                android:background="@drawable/claimreward"
+                android:elevation="10dp"
+                android:text="Rewards"
+                android:textStyle="italic" />
 
         </RelativeLayout>
 
