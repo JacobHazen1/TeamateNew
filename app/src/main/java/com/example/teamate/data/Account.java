@@ -12,6 +12,17 @@ public class Account {
 
     // Constructors
     public Account() {}
+
+    public Account(String inFirst, String inLast, String inEmail, String inPassword) {
+        this.firstName = inFirst;
+        this.lastName = inLast;
+        this.email = inEmail;
+        this.username = null;
+        this.companyID = 0;
+        this.accountID = 0;
+        this.password = inPassword;
+    }
+
     public Account(String inFirst, String inLast, String inEmail, String inUser, int inCID, int inAID, String inPassword) {
         this.firstName = inFirst;
         this.lastName = inLast;
