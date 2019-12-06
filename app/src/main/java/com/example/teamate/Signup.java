@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,11 +23,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Signup extends AppCompatActivity {
-    private static final String KEY_TITLE = "title";
-    private static final String KEY_DESCRIPTION = "description" ;
+public class    Signup extends AppCompatActivity {
+    private static final String KEY_EMAIL = "Email";
+    private static final String KEY_Password= "Password" ;
+    private static final String KEY_COMPANY = "Company";
     private static final String TAG ="Signup";
-    private Button signupregister;
     private EditText emailentry;
     private EditText passentry;
     private EditText registercompany;
@@ -46,49 +47,26 @@ public class Signup extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-//        reff = FirebaseDatabase.getInstance().getReference().child("User");
-//
-//        user = new User();
-////        FirebaseDatabase database = FirebaseDatabase.getInstance();
-////        final DatabaseReference myRef = database.getReference("message");
 
-        signupregister = (Button) findViewById(R.id.signupregister);
         emailentry = (EditText) findViewById(R.id.emailregistertext);
         passentry = (EditText) findViewById(R.id.passwordregistertext);
         registercompany = (EditText)findViewById(R.id.registercompany);
-        signupregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String em = emailentry.getText().toString().trim();
-                String pe = passentry.getText().toString().trim();
-                String rc =registercompany.getText().toString().trim();
-                Map<String, Object> note = new HashMap<>();
-                note.put(KEY_TITLE, em);
-                note.put(KEY_DESCRIPTION, pe);
-                if (em.length() != 0 && pe.length() != 0 && rc.length() != 0){
-                    startActivity(new Intent(Signup.this, MainActivity.class));
-                    db.collection("Notebook").document("my first").set(note);
-                }else{
-                    Toast.makeText(Signup.this, "Wrong password or usermames or company code",Toast.LENGTH_SHORT).show();
-
-                }
-
-
-            }
-        });
+        passentry.setTransformationMethod(new PasswordTransformationMethod());
     }
     public void saveNote (View v){
         String em = emailentry.getText().toString().trim();
         String pe = passentry.getText().toString().trim();
         String rc =registercompany.getText().toString().trim();
         Map<String, Object> note = new HashMap<>();
-        note.put(KEY_TITLE, em);
-        note.put(KEY_DESCRIPTION, pe);
+        note.put(KEY_EMAIL, em);
+        note.put(KEY_Password, pe);
+        note.put(KEY_COMPANY, rc);
 
-        db.collection("Notebook").document("my first").set(note).addOnSuccessListener(new OnSuccessListener<Void>() {
+        db.collection("Login Data").document("Users").set(note).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                Toast.makeText(Signup.this, "YAY", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signup.this, "Account Created", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Signup.this, MainActivity.class));
 
             }
         }).addOnFailureListener(new OnFailureListener() {

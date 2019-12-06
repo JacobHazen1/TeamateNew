@@ -39,29 +39,29 @@ public class AddActivitiesFragment extends Fragment {
                 startActivity(new Intent(AddActivitiesFragment.this.getActivity(), LoginActivity.class));
             }
         });
-        addworkout = (TextView) root.findViewById(R.id.addworkout);
-        addworkout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), Contactus.class));
-            }
-        });
-
-        addbike = (TextView) root.findViewById(R.id.addbiketowork);
-        addbike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), LoginActivity.class));
-            }
-        });
-        addvolunteer = (TextView) root.findViewById(R.id.addvolunteering);
-        addvolunteer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), LoginActivity.class));
-            }
-        });
-
+//        addworkout = (TextView) root.findViewById(R.id.addworkout);
+//        addworkout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), Contactus.class));
+//            }
+//        });
+//
+//        addbike = (TextView) root.findViewById(R.id.addbiketowork);
+//        addbike.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), LoginActivity.class));
+//            }
+//        });
+//        addvolunteer = (TextView) root.findViewById(R.id.addvolunteering);
+//        addvolunteer.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(AddActivitiesFragment.this.getActivity(), LoginActivity.class));
+//            }
+//        });
+//
 
 
 

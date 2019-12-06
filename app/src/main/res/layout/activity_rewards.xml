@@ -16,7 +16,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/AppleGift"
+                android:id="@+id/Applegiftcard"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -25,14 +25,12 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Yoga"
-                android:drawableRight="@drawable/icadd"
-                style="@style/viewParent.headerText.settingsTextIcon">
-            </TextView>
+                android:text="$10 Apple Gift Card"
+                style="@style/viewParent.headerText.settingsTextIcon"/>
 
 
             <TextView
-                android:id="@+id/addworkout"
+                android:id="@+id/subway"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -43,11 +41,11 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Workout"
+                android:text="$20 Subway card"
                 style="@style/viewParent.headerText.settingsTextIcon"/>
 
             <TextView
-                android:id="@+id/addbiketowork"
+                android:id="@+id/tuition"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -56,11 +54,11 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Biked to Work"
+                android:text="$200 off your tuition"
                 style="@style/viewParent.headerText.settingsTextIcon"/>
 
             <TextView
-                android:id="@+id/addvolunteering"
+                android:id="@+id/date"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -71,7 +69,7 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:textSize="15dp"
-                android:text="Volunteer"
+                android:text="2 month Goodlife membership"
                 style="@style/viewParent.headerText.settingsTextIcon"/>
 
         </LinearLayout>

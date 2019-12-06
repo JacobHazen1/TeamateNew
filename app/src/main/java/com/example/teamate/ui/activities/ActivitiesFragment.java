@@ -36,14 +36,14 @@ public class ActivitiesFragment extends Fragment {
 //                startActivity(new Intent(ActivitiesFragment.this.getActivity(), LoginActivity.class));
 //            }
 //        });
-//
-//        rewardsbutton = (Button) root.findViewById(R.id.rewardbutton);
-//        rewardsbutton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(ActivitiesFragment.this.getActivity(), RewardsActivity.class));
-//            }
-//        });
+
+        rewardsbutton = (Button) root.findViewById(R.id.rewardbutton);
+        rewardsbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ActivitiesFragment.this.getActivity(), RewardsActivity.class));
+            }
+        });
 
 
 //        return rootview;
