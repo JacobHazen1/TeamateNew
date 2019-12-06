@@ -18,8 +18,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button signupbutton;
     private EditText email;
     private EditText password;
-    private MyDBHandler dbHandler;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +27,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         loginButton = (Button) findViewById(R.id.btnlogin);
 
-        dbHandler = new MyDBHandler(this);
-
-        Account montek = new Account("Montek", "Parmar", "montek@gmail.com", "monpar", 1, 3, "fuck");
-
-        dbHandler.addHandler(montek);
 
         email = (EditText) findViewById(R.id.emailtext);
         password = (EditText) findViewById(R.id.passwordtext);
@@ -41,14 +34,15 @@ public class LoginActivity extends AppCompatActivity {
         password.getText();
 
         loginButton.setOnClickListener(new View.OnClickListener(){
+            String em = email.toString();
+            String pas = password.toString();
 
             @Override
             public void onClick(View view) {
-                Account account = dbHandler.findHandler(email.getText().toString());
-                if (account.getEmail().equals(email.getText().toString()) && account.getPassword().equals(password.getText().toString())) {
+                if (email.equals(em) && password.equals(pas) ) {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 }else {
-                    startActivity(new Intent(LoginActivity.this, Contactus.class));
+                    Toast.makeText(LoginActivity.this, "Wrong password/usermames",Toast.LENGTH_SHORT).show();
                 }
             }
         });

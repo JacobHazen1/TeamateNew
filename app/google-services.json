@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "993755076462",
+    "firebase_url": "https://teamatenew.firebaseio.com",
+    "project_id": "teamatenew",
+    "storage_bucket": "teamatenew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993755076462:android:2dd839b156692b65bf937f",
+        "android_client_info": {
+          "package_name": "com.example.teamate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993755076462-tojk8ck2ujomc1dtttkcrpnh29571ip8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.teamate",
+            "certificate_hash": "186a825043e5bcac9704bc8209f36ccef78058c8"
+          }
+        },
+        {
+          "client_id": "993755076462-fkes3nggk7h299ug0eietgv9rjh7e1de.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBohOMhOlJLDUQZdheoT6Rys4shBekLNt4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993755076462-fkes3nggk7h299ug0eietgv9rjh7e1de.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
