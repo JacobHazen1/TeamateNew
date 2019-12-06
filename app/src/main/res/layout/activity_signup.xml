@@ -15,7 +15,7 @@
         android:src="@drawable/logo"/>
 
     <EditText
-        android:id="@+id/emailtext"
+        android:id="@+id/emailregistertext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -29,7 +29,7 @@
         android:textColorHighlight="@color/teamateWhite"/>
 
     <EditText
-        android:id="@+id/passwordtext"
+        android:id="@+id/passwordregistertext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -41,54 +41,24 @@
         android:textColor="@color/teamateWhite"
         android:textColorHint="@color/teamateWhite"
         android:textColorHighlight="@color/teamateWhite"/>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/registercompany"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remember Me"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="0dp"
-            android:textColor="@color/teamateWhite"
-            android:buttonTint="@color/teamateWhite"
-            android:checked="true"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Forget Password"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="0dp"
-            android:textColor="@color/teamateWhite"
-            android:drawablePadding="6dp"
-            android:padding="4dp"/>
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnlogin"
-        android:onClick="finduser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Log In"
-        android:shadowColor="@android:color/transparent"
+        android:layout_margin="10dp"
         android:padding="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/shapelogin"/>
+        android:background="@drawable/shapeemail"
+        android:drawableLeft="@drawable/iclock"
+        android:drawablePadding="10dp"
+        android:hint="Company Code"
+        android:textColor="@color/teamateWhite"
+        android:textColorHint="@color/teamateWhite"
+        android:textColorHighlight="@color/teamateWhite"/>
+
 
     <Button
-        android:id="@+id/signuppage"
+        android:onClick="saveNote"
+        android:id="@+id/signupregister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up"
@@ -100,8 +70,6 @@
         android:layout_marginTop="0dp"
         android:background="@drawable/shapesignup"
         android:textColor="@color/cardview_dark_background"/>
-
-
 
 
 </LinearLayout>
